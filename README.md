@@ -18,7 +18,7 @@
 
 # DOCUMENTATION:
 
-Please see [CubeBot2.0's Documentation Page](https://docs.google.com/document/d/1Y06iGrTtgI6MlzKXthR83uvwkUw-CQb1SqX5Z-KaKSg/edit?usp=sharing]) for a write-up on CubeBot2.0's inner workings. 
+Please see [CubeBot2.0's Documentation Page](https://docs.google.com/document/d/1Y06iGrTtgI6MlzKXthR83uvwkUw-CQb1SqX5Z-KaKSg]) for a write-up on CubeBot2.0's inner workings. 
 
 
 
