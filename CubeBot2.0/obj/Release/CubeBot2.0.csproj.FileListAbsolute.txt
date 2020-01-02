@@ -1,0 +1,12 @@
+C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\bin\Release\CubeBot2.0.exe.config
+C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\bin\Release\CubeBot2.0.exe
+C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\bin\Release\CubeBot2.0.pdb
+C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.exe
+C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.pdb
+D:\repos\CubeBot2.0\CubeBot2.0\bin\Release\CubeBot2.0.exe.config
+D:\repos\CubeBot2.0\CubeBot2.0\bin\Release\CubeBot2.0.exe
+D:\repos\CubeBot2.0\CubeBot2.0\bin\Release\CubeBot2.0.pdb
+D:\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.csprojAssemblyReference.cache
+D:\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.csproj.CoreCompileInputs.cache
+D:\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.exe
+D:\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.pdb
