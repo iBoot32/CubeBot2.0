@@ -10,3 +10,13 @@ D:\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.csprojAssemblyReference.ca
 D:\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.csproj.CoreCompileInputs.cache
 D:\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.exe
 D:\repos\CubeBot2.0\CubeBot2.0\obj\Release\CubeBot2.0.pdb
+<<<<<<< HEAD
+C:\Users\yello\Desktop\CubeBot2.0-master\CubeBot2.0\bin\Release\CubeBot2.0.exe.config
+C:\Users\yello\Desktop\CubeBot2.0-master\CubeBot2.0\bin\Release\CubeBot2.0.exe
+C:\Users\yello\Desktop\CubeBot2.0-master\CubeBot2.0\bin\Release\CubeBot2.0.pdb
+C:\Users\yello\Desktop\CubeBot2.0-master\CubeBot2.0\obj\Release\CubeBot2.0.csproj.CoreCompileInputs.cache
+C:\Users\yello\Desktop\CubeBot2.0-master\CubeBot2.0\obj\Release\CubeBot2.0.exe
+C:\Users\yello\Desktop\CubeBot2.0-master\CubeBot2.0\obj\Release\CubeBot2.0.pdb
+C:\Users\yello\Desktop\CubeBot2.0-master\CubeBot2.0\obj\Release\CubeBot2.0.csprojAssemblyReference.cache
+=======
+>>>>>>> 4b9674c46e2b327d6952af221dc30069d81304df
