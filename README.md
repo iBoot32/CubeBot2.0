@@ -7,11 +7,12 @@
 - VERSION 2.0 IS COMPLETELY REWRITTEN FROM THE GROUND UP!
     - Now supports five new modes:
         - `scr`:        Solve a 3x3 given a scramble
+        - `order`:      Calculate the order of a given sequence of moves (number of repetitions needed to return to solved state)
         - `solve`:      Solve a 3x3 given a cornerstring followed by an edgestring (advanced)
         - `avg`:        Solve all scrambles in scrambles.txt
         - `time`:       Solve scrambles in scrambles.txt for a specified time.
         - `ao`:         “Average of” some number of scrambles in scrambles.txt
-    - Supports solving cubes in under 10 milliseconds on essentially any hardware (even a Core 2 Duo!), and as low as 1.5 milliseconds on good hardware!
+    - Supports solving cubes in under 50 milliseconds on essentially any hardware (even a Core 2 Duo!), and as low as .8 milliseconds on good hardware!
     - Fixed many bad programming decisions, and optimized the algorithm significantly (in terms of solving time and number of lines in the program)
 
 &nbsp;
