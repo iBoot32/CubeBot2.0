@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CubeBot2.0", "CubeBot2.0\CubeBot2.0.csproj", "{0454DD59-795C-4D74-BC68-A0A45C106C53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CubeBot2.0", "CubeBot\CubeBot2.0.csproj", "{D470AD46-F5B7-4724-BAF4-CFABA3A09878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0454DD59-795C-4D74-BC68-A0A45C106C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0454DD59-795C-4D74-BC68-A0A45C106C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0454DD59-795C-4D74-BC68-A0A45C106C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0454DD59-795C-4D74-BC68-A0A45C106C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D470AD46-F5B7-4724-BAF4-CFABA3A09878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D470AD46-F5B7-4724-BAF4-CFABA3A09878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D470AD46-F5B7-4724-BAF4-CFABA3A09878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D470AD46-F5B7-4724-BAF4-CFABA3A09878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7BB1D8A1-DFB5-4E73-96F3-F50D23E14668}
+		SolutionGuid = {8B2B1912-4DF1-48F4-AB6D-60A0F5C0D744}
 	EndGlobalSection
 EndGlobal

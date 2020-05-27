@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace CubeBotCLI
+namespace CubeBot
 {
     class cubestringcalc
     {
@@ -26,7 +24,7 @@ namespace CubeBotCLI
         public static string edgestring;
         public static bool isorder = false;
 
-        public void calc(string[] args)
+        public static void calc(string[] args)
         {
             Array.Clear(cornerarray, 0, cornerarray.Length);
             Array.Clear(edgearray, 0, edgearray.Length);
@@ -61,38 +59,17 @@ namespace CubeBotCLI
                 edgetemp[i] = edgearray[i];
             } //create backup of edge and corner arrays
 
-
-            if (CubeBot2._0.main.arg[0] == "avg" || CubeBot2._0.main.arg[0] == "time" || CubeBot2._0.main.arg[0] == "ao")
-            {
-                string[] ree = Regex.Split(args[CubeBot2._0.main.scr], " ");
-                for (int i = 1; i < ree.Length - 1; i++)
-                {
-                    cornerstring = null;
-                    edgestring = null;
-                    manipulate(ree[i]);
-                }
-            }
-
-            else
-            {
                 for (int i = 1; i < args.Length; i++)
                 {
                     cornerstring = null;
                     edgestring = null;
                     manipulate(args[i]);
                 }
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                string cs = "    Resulting cornerstring is " + cornerstring;
-                string es = "    Resulting edgestring is " + edgestring;
-                log(cs);
-                log(es);
-                Console.ResetColor();
             }
-        }
 
 
 
-           
+
 
         public static void resetedge()
         {
@@ -432,11 +409,11 @@ namespace CubeBotCLI
             for (int i = 0; i < cornerarray.Length; i++)
             {
                 cornerstring += cornerarray[i];
-            } 
+            }
             for (int i = 0; i < edgearray.Length; i++)
             {
                 edgestring += edgearray[i];
-            } 
+            }
         }
 
         static void put(string[] array, int positionA, int positionB)
@@ -446,11 +423,7 @@ namespace CubeBotCLI
 
         public static void log(string text)
         {
-            if (!isorder)
-            {
-                Console.WriteLine("  " + text);
-            }
+            Console.WriteLine(text);
         }
     }
-
 }

@@ -1,0 +1,6 @@
+C:\Users\yello\source\repos\CubeBot\CubeBot\bin\Debug\CubeBot2.0.exe.config
+C:\Users\yello\source\repos\CubeBot\CubeBot\bin\Debug\CubeBot2.0.exe
+C:\Users\yello\source\repos\CubeBot\CubeBot\bin\Debug\CubeBot2.0.pdb
+C:\Users\yello\source\repos\CubeBot\CubeBot\obj\Debug\CubeBot2.0.csproj.CoreCompileInputs.cache
+C:\Users\yello\source\repos\CubeBot\CubeBot\obj\Debug\CubeBot2.0.exe
+C:\Users\yello\source\repos\CubeBot\CubeBot\obj\Debug\CubeBot2.0.pdb

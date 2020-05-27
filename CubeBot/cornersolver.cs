@@ -1,23 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace CubeBot2._0
+namespace CubeBot
 {
     class cornersolver
     {
-        public static string cubestring;
-        public static string edgestring;
+        public static string cstring;
+        public static string estring;
         public static string[] current = new string[10];
+        public static int sub = 0;
+        public static int shoot;
+        public static bool cubeissolved = true;
+        public static string oldpiece;
+        public static int oldcornercolor;
+        public static string newpiece;
+        public static int newcornercolor;
+        public static string setup;
+        public static string und;
+        public static List<string> solutions = new List<string>();
         public static List<string> solvedpieces = new List<string>();
-
-
-        public static string[] solved = new string[] //define state of solved cube
+        public static string[] solved = new string[]
         {
                 "WOB",  "WRB",
                 "WRG",  "WOG",
@@ -26,32 +31,15 @@ namespace CubeBot2._0
                 "YRB",  "YOB"
         };
 
-        public static string setup;
-        public static string und;
-        public static string oldpiece;
-        public static string newpiece;
-        public static int oldcornercolor;
-        public static int newcornercolor;
-        public static bool cubeissolved = true;
-        public static int shoot;
-        public static List<string> solutions = new List<string>();
-
-        public static void alg(string args)
+        public static void alg(string costring, string edstring)
         {
-            cubestring = args;
-            if (main.arg[0] == "scr" || main.arg[0] == "avg" || main.arg[0] == "time" || main.arg[0] == "ao" || main.arg[0] == "robot")
-            {
-                edgestring = main.resedge;
-            }
-            else
-            {
-                edgestring = main.arg[2];
-            }
+            cstring = costring;
+            estring = edstring;
 
-            int sub = 0;
+            //split cornerstring into array
             for (int i = 0; i < 8; i++)
             {
-                current[i] = cubestring.Substring(sub, 3);
+                current[i] = cstring.Substring(sub, 3);
                 sub = sub + 3;
             }
 
@@ -65,6 +53,7 @@ namespace CubeBot2._0
             if (cubeissolved)
             {
                 done();
+                return;
             }
 
             oldpiece = "A";
@@ -76,6 +65,22 @@ namespace CubeBot2._0
 
             updatecurrent();
             solvenextcorner();
+            return;
+        }
+        public static void done()
+        {
+            if (solutions.Count % 2 != 0) //if number of solutions is even, edges remain how they began, otherwise we need to swap 2 edges
+            {
+                string buff = estring.Substring(0, 2);
+                string beforereplace = estring.Substring(2, 4);
+                string afterreplace = estring.Substring(8, 16);
+                string replace = (estring.Substring(6, 2));
+
+                string newedge = replace + beforereplace + buff + afterreplace;
+                estring = newedge;
+            }
+            main.stage2();
+            return;
         }
 
         public static void solvenextcorner()
@@ -90,24 +95,27 @@ namespace CubeBot2._0
             if (cubeissolved)
             {
                 done();
+                return;
             }
-            cubeissolved = true; //not actually solved, just restore default state for next loop (or else everything breaks)
-
-            if (current[0] == solved[0]) //if buffer is solved
+            else
             {
-                HandleTwist();
+                cubeissolved = true; //not actually solved, just restore default state for next loop (or else everything breaks)
+
+                if (current[0] == solved[0]) //if buffer is solved
+                {
+                    HandleTwist();
+                }
+
+                //oldpiece = newpiece;
+                oldcornercolor = 0;
+                findsetup(current[0]);
+
+                string solution = setup + " (R U' R' U' R U R' F' R U R' U' R' F R) " + und;
+                solutions.Add(solution);
+                updatecurrent();
+                solvenextcorner();
             }
-
-            //oldpiece = newpiece;
-            oldcornercolor = 0;
-            findsetup(current[0]);
-
-            string solution = setup + " (R U' R' U' R U R' F' R U R' U' R' F R) " + und;
-            solutions.Add(solution);
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.ResetColor();
-            updatecurrent();
-            solvenextcorner();
+            return;
         }
 
 
@@ -121,6 +129,7 @@ namespace CubeBot2._0
                     solvedpieces.Add(belongs(current[i], "loc"));
                 }
             }
+            return;
         }
 
         public static string belongs(string a, string mode)
@@ -350,6 +359,7 @@ namespace CubeBot2._0
                     newcornercolor = 1;
                 }
             }
+            return;
         }
 
         public static void updatecurrent()
@@ -430,6 +440,7 @@ namespace CubeBot2._0
                     swapchar(true, current[0], current[newcornercolor], 1, 1, 2, 3, 3, 2, 1, 1, 2, 3, 3, 2);
                     break;
             }
+            return;
         }
 
         public static void swapchar(bool swapbuffer, string buffer, string shotto, int buff_swap1_buffchar, int buff_swap1_shotchar, int buff_swap2_buffchar, int buff_swap2_shotchar, int buff_swap3_buffchar, int buff_swap3_shotchar, int shot_swap1_buffchar, int shot_swap1_shotchar, int shot_swap2_buffchar, int shot_swap2_shotchar, int shot_swap3_buffchar, int shot_swap3_shotchar)
@@ -453,32 +464,9 @@ namespace CubeBot2._0
 
             current[0] = temp_for_buff.ToString();
             current[newcornercolor] = shot_builder.ToString(); //pack changes back into current piece array
+            return;
         }
 
-        public static void done()
-        {
-            if (main.arg[main.arg.Length - 1] == "v")
-            {
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("      CORNERS ARE DONE");
-                Console.ResetColor();
-            }
-
-
-            if (solutions.Count % 2 != 0) //if number of solutions is even, edges remain how they began, otherwise we need to swap 2 edges
-            {
-                string buff = edgestring.Substring(0, 2);
-                string beforereplace = edgestring.Substring(2, 4);
-                string afterreplace = edgestring.Substring(8, 16);
-                string replace = (edgestring.Substring(6, 2));
-
-                string newedge = replace + beforereplace + buff + afterreplace;
-                edgestring = newedge;
-            }
-
-
-            Thread.CurrentThread.Abort();
-        }
 
         public static void HandleTwist()
         {
@@ -498,11 +486,7 @@ namespace CubeBot2._0
             updatecurrent();
 
             solvenextcorner();
-        }
-
-        public static void log(string text)
-        {
-            Console.WriteLine("   " + text);
+            return;
         }
     }
 }

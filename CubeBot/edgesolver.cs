@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace CubeBot2._0
+namespace CubeBot
 {
     class edgesolver
     {
@@ -79,8 +76,6 @@ namespace CubeBot2._0
 
             string solution = setup + " " + TPerm + " " + und;
             solutions.Add(solution);
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.ResetColor();
             updatecurrent();
             solvenextedge();
         }
@@ -442,13 +437,7 @@ namespace CubeBot2._0
 
         public static void done()
         {
-            if (main.arg[main.arg.Length - 1] == "v")
-            {
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("      EDGES ARE DONE");
-                Console.ResetColor();
-            }
-                Thread.CurrentThread.Abort();
+            main.finished();
         }
 
         public static void HandleTwist()
@@ -469,11 +458,6 @@ namespace CubeBot2._0
             updatecurrent();
 
             solvenextedge();
-        }
-
-        public static void log(string text)
-        {
-            Console.WriteLine("   " + text);
         }
     }
 }

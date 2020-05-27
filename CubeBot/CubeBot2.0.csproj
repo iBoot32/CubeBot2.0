@@ -4,9 +4,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0454DD59-795C-4D74-BC68-A0A45C106C53}</ProjectGuid>
+    <ProjectGuid>{D470AD46-F5B7-4724-BAF4-CFABA3A09878}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CubeBot2._0</RootNamespace>
+    <RootNamespace>CubeBot</RootNamespace>
     <AssemblyName>CubeBot2.0</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

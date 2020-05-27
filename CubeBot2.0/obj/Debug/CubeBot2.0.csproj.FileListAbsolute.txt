@@ -1,5 +1,0 @@
-C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\bin\Debug\CubeBot2.0.exe.config
-C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\bin\Debug\CubeBot2.0.exe
-C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\bin\Debug\CubeBot2.0.pdb
-C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\obj\Debug\CubeBot2.0.exe
-C:\Users\yello\source\repos\CubeBot2.0\CubeBot2.0\obj\Debug\CubeBot2.0.pdb
